@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー | MercariAssist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #FF4B4B;
+      --dark: #1a1a1a;
+      --gray: #6b7280;
+      --light: #f9fafb;
+      --border: #e5e7eb;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--red);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .page-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .updated {
+      color: var(--gray);
+      font-size: 13px;
+      margin-bottom: 40px;
+    }
+
+    .intro {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--red);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      color: #374151;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--red);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p { color: #374151; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      color: #374151;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--red);
+      font-size: 12px;
+      top: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #fef2f2;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--gray);
+      font-size: 13px;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-mark">🏷️</div>
+    <span class="logo-text">MercariAssist</span>
+  </div>
+</header>
+
+<main>
+  <h1 class="page-title">プライバシーポリシー</h1>
+  <p class="updated">最終更新日：2026年2月23日</p>
+
+  <div class="intro">
+    MercariAssist（以下「本拡張機能」）は、メルカリ出品をサポートするChrome拡張機能です。本ポリシーでは、本拡張機能がどのような情報を取り扱うかについて説明します。
+  </div>
+
+  <section>
+    <h2>収集する情報</h2>
+    <p>本拡張機能が収集・利用する情報は以下のとおりです。</p>
+    <ul>
+      <li>メルカリの商品名・価格情報（相場分析のため）</li>
+      <li>ユーザーが作成した出品テンプレート（ローカルに保存）</li>
+      <li>メルカリのAPIアクセストークン（APIリクエスト送信のみに使用）</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>情報の利用目的</h2>
+    <ul>
+      <li>メルカリ上の相場価格を分析・表示するため</li>
+      <li>出品テンプレートの保存・呼び出しを行うため</li>
+      <li>送料計算機能を提供するため</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>情報の保存場所 <span class="badge">重要</span></h2>
+    <p>本拡張機能が収集するすべての情報は、<strong>ユーザーのブラウザ内（ローカルストレージ）にのみ保存</strong>されます。</p>
+    <ul>
+      <li>外部サーバーへの送信は一切行いません</li>
+      <li>第三者へのデータ提供は行いません</li>
+      <li>クラウドへのバックアップは行いません</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>外部サービスとの通信</h2>
+    <p>本拡張機能は、相場価格の取得を目的としてメルカリの内部APIと通信します。この通信はユーザーのブラウザから直接行われ、本拡張機能の開発者はこの通信内容を受信・保存しません。</p>
+  </section>
+
+  <section>
+    <h2>アクセス権限について</h2>
+    <p>本拡張機能は以下の権限を使用します。</p>
+    <ul>
+      <li><strong>jp.mercari.com へのアクセス</strong>：出品ページへのUI表示・API通信のため</li>
+      <li><strong>ストレージ</strong>：テンプレートおよび価格キャッシュのローカル保存のため</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>データの削除</h2>
+    <p>本拡張機能をChromeから削除すると、ローカルに保存されたすべてのデータ（テンプレート・キャッシュ等）も削除されます。また、Chrome の拡張機能設定から「データを消去」することも可能です。</p>
+  </section>
+
+  <section>
+    <h2>ポリシーの変更</h2>
+    <p>本ポリシーを変更する場合は、このページの「最終更新日」を更新します。重要な変更がある場合は、拡張機能のアップデートを通じてお知らせします。</p>
+  </section>
+
+  <section>
+    <h2>お問い合わせ</h2>
+    <p>本ポリシーに関するご質問は、GitHubリポジトリのIssueよりお問い合わせください。</p>
+    <ul>
+      <li><a href="https://github.com/ken525/mercari-assist/issues" style="color: var(--red);">https://github.com/ken525/mercari-assist/issues</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 MercariAssist. All rights reserved.
+</footer>
+
+</body>
+</html>
