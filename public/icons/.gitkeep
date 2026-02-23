@@ -1,0 +1,45 @@
+# アイコンファイル
+
+このディレクトリには以下のアイコンファイルを配置してください：
+
+- icon16.png (16x16ピクセル)
+- icon48.png (48x48ピクセル)
+- icon128.png (128x128ピクセル)
+
+## アイコンの作成方法
+
+### 方法1: オンラインツールを使用
+以下のようなオンラインツールで簡単に作成できます：
+- https://www.favicon-generator.org/
+- https://realfavicongenerator.net/
+
+### 方法2: 画像編集ソフトを使用
+1. 16x16、48x48、128x128ピクセルの正方形の画像を作成
+2. 背景色を #FF6B6B（メルカリレッド系）に設定
+3. PNG形式で保存
+
+### 方法3: コマンドライン（ImageMagick使用）
+```bash
+# ImageMagickがインストールされている場合
+convert -size 16x16 xc:#FF6B6B icon16.png
+convert -size 48x48 xc:#FF6B6B icon48.png
+convert -size 128x128 xc:#FF6B6B icon128.png
+```
+
+### 方法4: Pythonスクリプト（Pillow使用）
+```python
+from PIL import Image
+
+sizes = [16, 48, 128]
+color = (255, 107, 107)  # #FF6B6B
+
+for size in sizes:
+    img = Image.new('RGB', (size, size), color)
+    img.save(f'icon{size}.png')
+```
+
+## 注意事項
+
+- アイコンファイルがない場合、Chrome拡張機能の読み込み時に警告が表示されますが、機能自体は動作します
+- アイコンは正方形である必要があります
+- PNG形式で保存してください

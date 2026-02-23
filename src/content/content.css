@@ -1,0 +1,226 @@
+/* コンテンツスクリプト用CSS - MercariAssist */
+
+/* カラースキーム */
+:root {
+  --ma-main-color: #FF6B6B;
+  --ma-accent-color: #4ECDC4;
+  --ma-bg-color: #FFFFFF;
+  --ma-border-color: #E0E0E0;
+  --ma-text-color: #333333;
+  --ma-sub-text-color: #666666;
+  --ma-btn-bg: #F0F0F0;
+  --ma-btn-hover: #E0E0E0;
+}
+
+/* メインコンテナ */
+.ma-price-box {
+  background: var(--ma-bg-color);
+  border: 1px solid var(--ma-border-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+.ma-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ma-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.ma-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ma-text-color);
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* 更新ボタン */
+.ma-refresh-btn {
+  background: var(--ma-btn-bg);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--ma-text-color);
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+.ma-refresh-btn:hover {
+  background: var(--ma-btn-hover);
+}
+
+.ma-refresh-btn:active {
+  transform: scale(0.98);
+}
+
+/* ローディング */
+.ma-loading {
+  text-align: center;
+  color: var(--ma-sub-text-color);
+  padding: 20px;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* エラーメッセージ */
+.ma-error {
+  text-align: center;
+  color: var(--ma-main-color);
+  padding: 20px;
+  font-size: 14px;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* コンテンツ */
+.ma-content {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* 統計情報 */
+.ma-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* おすすめ価格（最初の統計情報） */
+.ma-stat:first-child .ma-value.recommended {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ma-main-color);
+}
+
+/* 統計グリッド */
+.ma-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* ラベル */
+.ma-label {
+  font-size: 12px;
+  color: var(--ma-sub-text-color);
+  font-weight: 400;
+}
+
+/* 値 */
+.ma-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ma-text-color);
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .ma-price-box {
+    padding: 12px;
+    margin: 12px 0;
+  }
+
+  .ma-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .ma-title {
+    font-size: 14px;
+  }
+
+  .ma-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ma-stat:first-child .ma-value.recommended {
+    font-size: 20px;
+  }
+
+  .ma-value {
+    font-size: 16px;
+  }
+
+  .ma-refresh-btn {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ma-price-box {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+  }
+
+  .ma-title {
+    font-size: 13px;
+  }
+
+  .ma-stat:first-child .ma-value.recommended {
+    font-size: 18px;
+  }
+
+  .ma-value {
+    font-size: 14px;
+  }
+}
+
+/* メルカリの既存スタイルとの競合を避けるための詳細度調整 */
+.ma-price-box * {
+  box-sizing: border-box;
+}
+
+.ma-price-box button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* アクセシビリティ */
+.ma-refresh-btn:focus {
+  outline: 2px solid var(--ma-accent-color);
+  outline-offset: 2px;
+}
+
+.ma-refresh-btn:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 印刷時の非表示 */
+@media print {
+  .ma-price-box {
+    display: none;
+  }
+}
